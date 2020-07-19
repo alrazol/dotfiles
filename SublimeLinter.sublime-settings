@@ -1,10 +1,22 @@
 {
   "paths": {
-    "linux": [
-      "~/.rbenv/shims"
-    ],
     "osx": [
-      "~/.rbenv/shims"
+      "~/.rbenv/shims",
+      "~/.pyenv/shims"
     ]
-  }
+  },
+  "linters": {
+    "pylint": {
+      "executable": "~/.pyenv/shims/pylint",
+      "disable": false
+    },
+    "rubocop": {
+      "disable": false
+    },
+    "standardrb": {
+      "disable": true,
+      "args": "--fix"
+    }
+  },
+  "debug": true
 }

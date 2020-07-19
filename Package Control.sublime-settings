@@ -1,19 +1,33 @@
 {
-  "installed_packages":
-  [
-    "A File Icon",
-    "AdvancedNewFile",
-    "All Autocomplete",
-    "Babel",
-    "Emmet",
-    "ERB Snippets",
-    "Git",
-    "Latest Migration",
-    "MagicPython",
-    "Package Control",
-    "SCSS",
-    "SublimeLinter",
-    "SublimeLinter-rubocop",
-    "BracketHighlighter"
-  ]
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"Anaconda",
+		"ayu",
+		"Babel",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"Dockerfile Syntax Highlighting",
+		"Emmet",
+		"ERB Snippets",
+		"Git",
+		"Latest Migration",
+		"MagicPython",
+		"Materialize",
+		"Package Control",
+		"SCSS",
+		"SublimeLinter",
+		"SublimeLinter-pylint",
+		"SublimeLinter-rubocop"
+	],
+	"repositories":
+	[
+		"https://github.com/bofm/sublime-boxy-theme"
+	]
 }

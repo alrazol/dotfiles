@@ -18,7 +18,7 @@
   st = status -sb
   br = branch
   ci = commit
-  fo = fetch origin
+  cm = commit -m
   d = !git --no-pager diff
   dt  = difftool
   stat = !git --no-pager diff --stat
@@ -49,3 +49,5 @@
 [user]
 	email = brunolajoie@gmail.com
 	name = Bruno Lajoie
+[pull]
+	ff = only

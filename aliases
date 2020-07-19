@@ -3,4 +3,11 @@ alias myip="curl https://ipinfo.io/json" # or /ip for plain-text ip
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 
 # Quickly serve the current directory as HTTP
-alias serve='ruby -run -e httpd . -p 8000' # Or python -m SimpleHTTPServer :)
+# alias serve='ruby -run -e httpd . -p 8000' # Or python -m SimpleHTTPServer :)
+
+# Docker
+alias dc='docker-compose'
+alias dce='docker-compose exec'
+
+# Jupyter notebook nbconvert (refers to https://github.com/lewagon/data-lectures/wiki/How-to-set-up-a-lecture-edition-environment)
+jnbconvert() { ls *.ipynb | entr -r jupyter nbconvert "$1" --to slides --post serve; }

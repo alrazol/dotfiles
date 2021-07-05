@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/Materialize/schemes/Material Solarized Light.tmTheme",
+	"color_scheme": "Packages/ayu/ayu-light.sublime-color-scheme",
 	"detect_indentation": false,
 	"draw_white_space": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -22,13 +22,13 @@
 		".pytest_cache",
 		"__pycache__"
 	],
-	"font_size": 12,
+	"font_size": 15,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
 	[
 		"Python",
-		"Vintage"
+		"Vintage",
 	],
 	"remember_open_files": false,
 	"rulers":
@@ -36,11 +36,11 @@
 		80
 	],
 	"tab_size": 2,
-	"theme": "Material Solarized Light.sublime-theme",
+	"theme": "ayu-light.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false,
 	"use_tab_stops": true,
-	"word_wrap": false
+	"word_wrap": false,
 }

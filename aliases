@@ -10,4 +10,18 @@ alias dc='docker-compose'
 alias dce='docker-compose exec'
 
 # Jupyter notebook nbconvert (refers to https://github.com/lewagon/data-lectures/wiki/How-to-set-up-a-lecture-edition-environment)
-jnbconvert() { ls *.ipynb | entr -r jupyter nbconvert "$1" --to slides --post serve; }
+jnbconvert() { ls *.ipynb | entr -r jupyter nbconvert "$1" --to slides --post serve --TemplateExporter.extra_template_basedirs=../templates --template=kitt; }
+alias jn='jupyter notebook'
+
+# git
+alias ghv='gh repo view --web'
+
+# VSCODE
+alias c='code .'
+
+# LeWagon
+alias nbc="nbcleanmeta $@"
+alias cha="challengify $@"
+
+
+alias sb="cd ~/code/sandbox"

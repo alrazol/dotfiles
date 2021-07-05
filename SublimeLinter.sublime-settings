@@ -6,9 +6,11 @@
     ]
   },
   "linters": {
+    "flake8": {
+    },
     "pylint": {
       "executable": "~/.pyenv/shims/pylint",
-      "disable": false
+      "disable": true
     },
     "rubocop": {
       "disable": false

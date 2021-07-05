@@ -9,6 +9,7 @@
 		"AdvancedNewFile",
 		"All Autocomplete",
 		"Anaconda",
+		"AutoPEP8",
 		"ayu",
 		"Babel",
 		"BracketHighlighter",
@@ -17,17 +18,20 @@
 		"Emmet",
 		"ERB Snippets",
 		"Git",
+		"GitLink",
 		"Latest Migration",
 		"MagicPython",
 		"Materialize",
 		"Package Control",
+		"Predawn",
 		"SCSS",
 		"SublimeLinter",
+		"SublimeLinter-flake8",
 		"SublimeLinter-pylint",
 		"SublimeLinter-rubocop"
 	],
 	"repositories":
 	[
 		"https://github.com/bofm/sublime-boxy-theme"
-	]
+	],
 }

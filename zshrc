@@ -4,8 +4,12 @@ ZSH=$HOME/.oh-my-zsh
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="robbyrussell"
 
-# Useful oh-my-zsh plugins for Le Wagon bootcamps
-plugins=(git gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search pyenv z)
+
+# Useful oh-my-zsh plugins
+## zsh-completion plugin has to be installed manually for performance purpose
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+
+plugins=(git gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search pyenv z zsh-autosuggestions direnv)
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -23,8 +27,8 @@ unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 # Encoding stuff for the terminal
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export BUNDLER_EDITOR=code
-#export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
+#export BUNDLER_EDITOR=code
+export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
 
 ######### RUBY ############
 
@@ -77,6 +81,21 @@ type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-
 export PYTHONPATH="/Users/brunolajoie/code/lewagon/data-solutions/04-Decision-Science:$PYTHONPATH"
 # export PYTHONPATH="/Users/brunolajoie/code/electricitymap:$PYTHONPATH"
 
+# use ipdb instead of pdb with breakpoint()
+export PYTHONBREAKPOINT=ipdb.set_trace
+
+# Tensorflow
+# 0 = all messages are logged (default behavior)
+# 1 = INFO messages are not printed
+# 2 = INFO and WARNING messages are not printed
+# 3 = INFO, WARNING, and ERROR messages are not printed
+export TF_CPP_MIN_LOG_LEVEL=2
+
+######### RUST  ##########
+# Append rust-related bins to PATH
+. "$HOME/.cargo/env"
+#export DFT_BACKGROUND=light  # for light background shell
+
 ######### OTHER ##########
 
 # Created by `userpath` on 2020-09-24 15:10:53
@@ -86,6 +105,12 @@ export PATH="$PATH:/Users/brunolajoie/.local/bin"
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 
 ######### CREDENTIALS - WARNING: DO NOT HARDCODE THEM HERE ##########
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/brunolajoie/.config/gcloud/application_default_credentials.json"
 
 # GOOGLE CLOUD
-export GOOGLE_APPLICATION_CREDENTIALS=/Users/brunolajoie/Documents/gcp_keys/wagon-bootcamp-3d5b3d368d67.json
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi

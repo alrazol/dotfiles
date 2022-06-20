@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/ayu/ayu-light.sublime-color-scheme",
+	"color_scheme": "auto",
 	"detect_indentation": false,
 	"draw_white_space": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -36,11 +36,15 @@
 		80
 	],
 	"tab_size": 2,
-	"theme": "ayu-light.sublime-theme",
+	"theme": "auto",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false,
 	"use_tab_stops": true,
 	"word_wrap": false,
+	"dark_theme": "ayu-mirage.sublime-theme",
+	"light_theme": "ayu-light.sublime-theme",
+	"dark_color_scheme": "ayu-mirage.sublime-color-scheme",
+	"light_color_scheme": "ayu-light.sublime-color-scheme",
 }

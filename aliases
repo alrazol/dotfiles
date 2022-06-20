@@ -1,3 +1,7 @@
+######## OH MY ZSH ############
+# [alias list](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git#aliases)
+
+######## HOME MADE ############
 # Get External IP / Internet Speed
 alias myip="curl https://ipinfo.io/json" # or /ip for plain-text ip
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
@@ -14,15 +18,19 @@ jnbconvert() { ls *.ipynb | entr -r jupyter nbconvert "$1" --to slides --post se
 alias jn='jupyter notebook'
 alias lab='jupyter lab'
 
-# git
-alias ghv='gh repo view --web'
-
 # VSCODE
 alias c='code .'
 
 # LeWagon
 alias nbc="nbcleanmeta $@"
 alias cha="challengify $@"
-
-
 alias sb="cd ~/code/sandbox"
+alias utils="cd '/Users/brunolajoie/Documents/Google Drive Perso/notes/utils'"
+
+# Git
+alias gbranches='for branch in `git branch | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r '
+alias gdt='git difftool'
+alias gdts='git difftool --staged'
+
+# list PATH in human readable column format
+path="echo $PATH | tr : \\n"

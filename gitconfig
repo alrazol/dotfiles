@@ -11,7 +11,7 @@
 
 [core]
   pager = less -FRSX
-	editor = code #'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
+	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
 
 [alias]
   co = checkout
@@ -21,6 +21,7 @@
   cm = commit -m
   d = !git --no-pager diff
   dt  = difftool
+  dts = difftool --staged
   stat = !git --no-pager diff --stat
 
   # Clean merged branches
@@ -51,5 +52,26 @@
 	email = brunolajoie@gmail.com
 	name = Bruno Lajoie
 [pull]
-	ff = only
+	ff = yes
   rebase = false
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+# DIFFSTATIC tool https://difftastic.wilfred.me.uk/git.html
+[diff]
+  tool = difftastic
+
+[difftool]
+  prompt = false
+
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
+
+[pager]
+        difftool = true
+

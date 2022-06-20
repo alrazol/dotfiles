@@ -28,7 +28,7 @@
 		"SublimeLinter",
 		"SublimeLinter-flake8",
 		"SublimeLinter-pylint",
-		"SublimeLinter-rubocop"
+		"SublimeLinter-rubocop",
 	],
 	"repositories":
 	[

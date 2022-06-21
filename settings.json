@@ -1,83 +1,199 @@
 {
-    "[python]": {
-        "editor.bracketPairColorization.enabled": false,
-        "editor.guides.bracketPairs": false,
-        "editor.tabSize": 4
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.bracketPairColorization.enabled": false,
+    "editor.guides.bracketPairs": false,
+  },
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.executorMap": {
+    // "code-runner" extension setup to make use of your active env
+    "python": "~/.pyenv/shims/python",
+    "ruby": "~/.rbenv/shims/ruby"
+  },
+  "code-runner.showExecutionMessage": false,
+  "cSpell.enabled": false,
+  "cSpell.enableFiletypes": [
+    "markdown"
+  ],
+  "cSpell.language": "en, fr",
+  "cSpell.userWords": [
+    "CHALLENGIFY",
+    "dataframe",
+    "nbresult",
+    "ndarray",
+    "scikit",
+    "sklearn",
+    "tensorflow",
+    "termcolor"
+  ],
+  "diffEditor.renderSideBySide": false,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.fontSize": 13,
+  "editor.guides.bracketPairs": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.largeFileOptimizations": true,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "inline": "true",
+    "other": "on",
+    "strings": "off"
+  },
+  "editor.renderControlCharacters": true,
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.snippetSuggestions": "bottom",
+  "editor.showFoldingControls": "always",
+  "editor.tabCompletion": "off",
+  "editor.tabSize": 2,
+  "emmet.excludeLanguages": [
+    "markdown"
+  ],
+  "emmet.includeLanguages": {
+    "erb": "html"
+  },
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+  "explorer.confirmDelete": false,
+  "files.exclude": {
+    "__pycache__": true,
+    "_site": true,
+    ".asset-cache": true,
+    ".bundle": true,
+    ".pytest_cache": true,
+    ".sass-cache": true,
+    ".svn": true,
+    "**/__pycache__": true,
+    "**/.DS_Store": true,
+    "**/.egg-info": true,
+    "**/.git": true,
+    "**/.ipynb_checkpoints": true,
+    "build": true,
+    "coverage": true,
+    "dist": true,
+    "log": true,
+    "node_modules": true,
+    "public/packs": true,
+    "tmp": true
+  },
+  "files.hotExit": "off",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/audits/**": true,
+    "**/coverage/**": true,
+    "**/log/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/vendor/**": true
+  },
+  "githubPullRequests.queries": [
+    {
+      "label": "Waiting For My Review",
+      "query": "is:open review-requested:${user}"
     },
-    "editor.bracketPairColorization.enabled": true,
-    "editor.detectIndentation": false,
-    "editor.fontSize": 14,
-    "editor.guides.bracketPairs": true,
-    "editor.minimap.enabled": false,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.renderControlCharacters": true,
-    "editor.rulers": [
-        80,
-        120
-    ],
-    "editor.showFoldingControls": "always",
-    "editor.snippetSuggestions": "top",
-    "editor.tabSize": 2,
-    "emmet.includeLanguages": {
-        "erb": "html"
+    {
+      "label": "Assigned To Me",
+      "query": "is:open assignee:${user}"
     },
-    "emmet.showSuggestionsAsSnippets": true,
-    "emmet.triggerExpansionOnTab": true,
-    "explorer.confirmDelete": false,
-    "files.exclude": {
-        "__pycache__": true,
-        "_site": true,
-        ".asset-cache": true,
-        ".bundle": true,
-        ".ipynb_checkpoints": true,
-        ".pytest_cache": true,
-        ".sass-cache": true,
-        ".svn": true,
-        "**/.DS_Store": true,
-        "**/.egg-info": true,
-        "**/.git": true,
-        "build": true,
-        "coverage": true,
-        "dist": true,
-        "log": true,
-        "node_modules": true,
-        "public/packs": true,
-        "tmp": true
-    },
-    "files.hotExit": "off",
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "files.watcherExclude": {
-        "**/audits/**": true,
-        "**/coverage/**": true,
-        "**/log/**": true,
-        "**/node_modules/**": true,
-        "**/tmp/**": true,
-        "**/vendor/**": true
-    },
-    "git.enabled": false,
-    "notebook.diff.ignoreMetadata": true,
-    "notebook.lineNumbers": "on",
-    "notebook.markup.fontSize": 13,
-    "python.defaultInterpreterPath": "~/.pyenv/shims/python",
-    "python.formatting.provider": "yapf",
-    "python.languageServer": "Pylance",
-    "python.linting.enabled": false,
-    "python.linting.flake8Enabled": false,
-    "python.linting.pylintEnabled": false,
-    "python.terminal.activateEnvironment": false,
-    "ruby.lint": {
-        "rubocop": true
-    },
-    "telemetry.telemetryLevel": "off",
-    "window.restoreWindows": "none",
-    "window.newWindowDimensions": "maximized",
-    "workbench.editor.enablePreview": true,
-    "workbench.iconTheme": "vscode-great-icons",
-    "workbench.settings.editor": "json",
-    "workbench.settings.openDefaultSettings": true,
-    "workbench.settings.useSplitJSON": true,
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.panel.defaultLocation": "right",
+    {
+      "label": "Created By Me",
+      "query": "is:open author:${user}"
+    }
+  ],
+  "githubPullRequests.terminalLinksHandler": "github",
+  // git lens exention
+  "gitlens.blame.avatars": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.avatars": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.views.branches.avatars": false,
+  "gitlens.views.commits.avatars": false,
+  "gitlens.views.contributors.avatars": false,
+  "gitlens.views.fileHistory.avatars": false,
+  "gitlens.views.lineHistory.avatars": false,
+  "gitlens.views.remotes.avatars": false,
+  "gitlens.views.repositories.avatars": false,
+  "gitlens.views.searchAndCompare.avatars": false,
+  "gitlens.views.tags.avatars": false,
+  "gotoNextPreviousMember.symbolKinds": [
+    "class",
+    "function",
+    "method"
+  ],
+  "jupyter.askForKernelRestart": false,
+  "jupyter.debugJustMyCode": true,
+  "jupyter.runStartupCommands": [
+    "%load_ext autoreload",
+    "%autoreload 2"
+  ],
+  // Choose the Math expression rendering method here. You can also disable math rendering if you want by choosing 'None'.
+  "markdown-preview-enhanced.mathRenderingOption": "MathJax",
+  "markdown.marp.mathTypesetting": "mathjax",
+  "markdown.preview.fontSize": 12,
+  "markdown.preview.lineHeight": 1.4,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "right"
+  },
+  "notebook.diff.ignoreMetadata": true,
+  "notebook.lineNumbers": "on",
+  "notebook.markup.fontSize": 13,
+  // "python.venvFolders": [
+  //   "/Users/brunolajoie/.pyenv/versions/3.8.12/envs/"
+  // ],
+  "python.analysis.extraPaths": [
+    //"/Users/brunolajoie/.pyenv/versions/3.8.12/envs/lewagon3812/lib/python3.8/site-packages"
+  ],
+  // Path to python interpreter
+  "python.defaultInterpreterPath": "~/.pyenv/shims/python",
+  // Python formatter & linter
+  "python.formatting.provider": "yapf",
+  "python.languageServer": "Pylance",
+  "python.linting.enabled": false,
+  "python.linting.flake8Enabled": false,
+  "python.linting.pylintEnabled": false,
+  // "python.venvPath": "~/.pyenv",
+  // "python.venvFolders": ["~/.pyenv/plugins/pyenv-virtualenv/shims"],
+  // "python.terminal.activateEnvironment": true,
+  // "python.terminal.activateEnvInCurrentTerminal": false,
+  "python.testing.unittestEnabled": true, // Enable testing using unittest.
+  "redhat.telemetry.enabled": false,
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "search.useIgnoreFiles": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "telemetry.telemetryLevel": "off",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "window.newWindowDimensions": "maximized",
+  "window.restoreWindows": "none",
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "GitHub Light",
+  "workbench.editor.enablePreview": true,
+  "workbench.editorAssociations": {
+    "*.html": "default",
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.experimental.editor.dragAndDropIntoEditor.enabled": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.panel.defaultLocation": "right",
+  "workbench.settings.openDefaultSettings": true,
+  "workbench.settings.useSplitJSON": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "zenMode.centerLayout": false,
+  "zenMode.fullScreen": true,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideTabs": false
 }

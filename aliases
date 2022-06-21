@@ -6,9 +6,6 @@
 alias myip="curl https://ipinfo.io/json" # or /ip for plain-text ip
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 
-# Quickly serve the current directory as HTTP
-# alias serve='ruby -run -e httpd . -p 8000' # Or python -m SimpleHTTPServer :)
-
 # Docker
 alias dc='docker-compose'
 alias dce='docker-compose exec'
@@ -26,6 +23,7 @@ alias nbc="nbcleanmeta $@"
 alias cha="challengify $@"
 alias sb="cd ~/code/sandbox"
 alias utils="cd '/Users/brunolajoie/Documents/Google Drive Perso/notes/utils'"
+alias serve= python -m SimpleHTTPServer # or 'ruby -run -e httpd . -p 8000'
 
 # Git
 alias gbranches='for branch in `git branch | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r '
@@ -33,4 +31,4 @@ alias gdt='git difftool'
 alias gdts='git difftool --staged'
 
 # list PATH in human readable column format
-path="echo $PATH | tr : \\n"
+alias path="echo $PATH | tr : \\n"

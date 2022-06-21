@@ -11,7 +11,7 @@
 
 [core]
   pager = less -FRSX
-	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
+  editor = code --wait # editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
 
 [alias]
   co = checkout
@@ -48,6 +48,7 @@
 
 [branch "master"]
   mergeoptions = --no-edit
+
 [user]
 	email = brunolajoie@gmail.com
 	name = Bruno Lajoie
@@ -73,5 +74,4 @@
   cmd = difft "$LOCAL" "$REMOTE"
 
 [pager]
-        difftool = true
-
+  difftool = true

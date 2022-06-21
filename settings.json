@@ -179,8 +179,7 @@
   },
   "window.newWindowDimensions": "maximized",
   "window.restoreWindows": "none",
-  "window.zoomLevel": 1,
-  "workbench.colorTheme": "GitHub Light",
+  "workbench.colorTheme": "Monokai",
   "workbench.editor.enablePreview": true,
   "workbench.editorAssociations": {
     "*.html": "default",

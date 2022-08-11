@@ -1,3 +1,7 @@
+Host 35.240.107.210
+  HostName 35.240.107.210
+  User brunolajoie
+
 Host *
   UseKeychain yes
   AddKeysToAgent yes

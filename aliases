@@ -29,6 +29,7 @@ alias serve= python -m SimpleHTTPServer # or 'ruby -run -e httpd . -p 8000'
 alias gbranches='for branch in `git branch | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r '
 alias gdt='git difftool'
 alias gdts='git difftool --staged'
+alias grss='git restore --staged'
 
 # list PATH in human readable column format
 alias path="echo $PATH | tr : \\n"

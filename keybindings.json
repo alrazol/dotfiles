@@ -209,12 +209,16 @@
       "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
   },
   {
+    "key": "shift+enter",
+    "command": "-python.execSelectionInTerminal",
+    "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+  },
+  {
       "key": "ctrl+`",
       "command": "workbench.action.terminal.toggleTerminal"
   },
   {
-      "key": "shift+enter",
-      "command": "-python.execSelectionInTerminal",
-      "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
-  }
+    "key": "ctrl+alt+`",
+    "command": "workbench.action.toggleMaximizedPanel",
+  },
 ]

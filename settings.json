@@ -1,8 +1,8 @@
 {
   "[python]": {
-    "editor.tabSize": 4,
-    "editor.bracketPairColorization.enabled": false,
-    "editor.guides.bracketPairs": false,
+    "editor.tabSize": 4
+    // "editor.bracketPairColorization.enabled": false,
+    // "editor.guides.bracketPairs": false,
   },
   "code-runner.clearPreviousOutput": true,
   "code-runner.executorMap": {
@@ -19,10 +19,14 @@
   "cSpell.userWords": [
     "CHALLENGIFY",
     "dataframe",
+    "lewagon",
+    "mkdir",
+    "mlops",
     "nbresult",
     "ndarray",
     "scikit",
     "sklearn",
+    "taxifare",
     "tensorflow",
     "termcolor"
   ],
@@ -47,12 +51,12 @@
     80,
     120
   ],
-  "editor.snippetSuggestions": "bottom",
   "editor.showFoldingControls": "always",
-  "editor.tabCompletion": "off",
-  "editor.tabSize": 2,
+  "editor.snippetSuggestions": "bottom",
   "emmet.excludeLanguages": [
-    "markdown"
+    "markdown",
+    "yml",
+    "yaml"
   ],
   "emmet.includeLanguages": {
     "erb": "html"
@@ -60,8 +64,10 @@
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": true,
   "explorer.confirmDelete": false,
+  "files.associations": {
+    "*.sql": "jinja-sql"
+  },
   "files.exclude": {
-    "__pycache__": true,
     "_site": true,
     ".asset-cache": true,
     ".bundle": true,
@@ -86,6 +92,11 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "files.watcherExclude": {
+    "**/.egg-info": true,
+    "**/__pycache__": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/*{.jpg,.png,.gif,.webp,.jpeg}": true,
     "**/audits/**": true,
     "**/coverage/**": true,
     "**/log/**": true,
@@ -93,6 +104,7 @@
     "**/tmp/**": true,
     "**/vendor/**": true
   },
+  "githubPullRequests.pullBranch": "never",
   "githubPullRequests.queries": [
     {
       "label": "Waiting For My Review",
@@ -128,17 +140,24 @@
     "function",
     "method"
   ],
+  "hadolint.cliOptions": [
+    "--no-color"
+  ],
+  "hadolint.hadolintPath": "/usr/local/bin/hadolint",
   "jupyter.askForKernelRestart": false,
   "jupyter.debugJustMyCode": true,
   "jupyter.runStartupCommands": [
     "%load_ext autoreload",
     "%autoreload 2"
   ],
+  "liveServer.settings.CustomBrowser": "chrome",
   // Choose the Math expression rendering method here. You can also disable math rendering if you want by choosing 'None'.
   "markdown-preview-enhanced.mathRenderingOption": "MathJax",
   "markdown.marp.mathTypesetting": "mathjax",
-  "markdown.preview.fontSize": 12,
+  "markdown.preview.fontSize": 13,
   "markdown.preview.lineHeight": 1.4,
+  "markdown.preview.scrollEditorWithPreview": false,
+  "markdown.preview.scrollPreviewWithEditor": false,
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "right"
@@ -153,7 +172,7 @@
     //"/Users/brunolajoie/.pyenv/versions/3.8.12/envs/lewagon3812/lib/python3.8/site-packages"
   ],
   // Path to python interpreter
-  "python.defaultInterpreterPath": "~/.pyenv/shims/python",
+  //"python.defaultInterpreterPath": "~/.pyenv/shims/python",
   // Python formatter & linter
   "python.formatting.provider": "yapf",
   "python.languageServer": "Pylance",
@@ -162,12 +181,15 @@
   "python.linting.pylintEnabled": false,
   // "python.venvPath": "~/.pyenv",
   // "python.venvFolders": ["~/.pyenv/plugins/pyenv-virtualenv/shims"],
-  // "python.terminal.activateEnvironment": true,
-  // "python.terminal.activateEnvInCurrentTerminal": false,
+  "python.terminal.activateEnvironment": false,
+  //"python.terminal.activateEnvInCurrentTerminal": false,
   "python.testing.unittestEnabled": true, // Enable testing using unittest.
   "redhat.telemetry.enabled": false,
   "ruby.lint": {
     "rubocop": true
+  },
+  "search.exclude": {
+    // Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the `files.exclude` setting.
   },
   "search.useIgnoreFiles": false,
   "security.workspace.trust.untrustedFiles": "open",
@@ -177,6 +199,7 @@
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
+  "terminal.integrated.shellIntegration.enabled": true,
   "window.newWindowDimensions": "maximized",
   "window.restoreWindows": "none",
   "workbench.colorTheme": "Monokai",
@@ -185,9 +208,9 @@
     "*.html": "default",
     "*.ipynb": "jupyter-notebook"
   },
-  "workbench.experimental.editor.dragAndDropIntoEditor.enabled": true,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.panel.defaultLocation": "right",
+  "workbench.preferredDarkColorTheme": "Monokai",
+  "workbench.preferredLightColorTheme": "GitHub Light",
   "workbench.settings.openDefaultSettings": true,
   "workbench.settings.useSplitJSON": true,
   "workbench.startupEditor": "newUntitledFile",

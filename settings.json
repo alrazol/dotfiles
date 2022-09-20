@@ -11,7 +11,6 @@
     "ruby": "~/.rbenv/shims/ruby"
   },
   "code-runner.showExecutionMessage": false,
-  "cSpell.enabled": false,
   "cSpell.enableFiletypes": [
     "markdown"
   ],
@@ -92,6 +91,7 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "files.watcherExclude": {
+    "**/*.csv": true,
     "**/.egg-info": true,
     "**/__pycache__": true,
     "**/.git/objects/**": true,
@@ -146,10 +146,10 @@
   "hadolint.hadolintPath": "/usr/local/bin/hadolint",
   "jupyter.askForKernelRestart": false,
   "jupyter.debugJustMyCode": true,
-  "jupyter.runStartupCommands": [
-    "%load_ext autoreload",
-    "%autoreload 2"
-  ],
+  // "jupyter.runStartupCommands": [
+  //   "%load_ext autoreload",
+  //   "%autoreload 2"
+  // ],
   "liveServer.settings.CustomBrowser": "chrome",
   // Choose the Math expression rendering method here. You can also disable math rendering if you want by choosing 'None'.
   "markdown-preview-enhanced.mathRenderingOption": "MathJax",
@@ -202,7 +202,7 @@
   "terminal.integrated.shellIntegration.enabled": true,
   "window.newWindowDimensions": "maximized",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "Monokai",
+  "workbench.colorTheme": "GitHub Light",
   "workbench.editor.enablePreview": true,
   "workbench.editorAssociations": {
     "*.html": "default",

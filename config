@@ -1,3 +1,10 @@
+# bruno@lewagon.org / bruno-bootcamp / data-setup VM
+Host 34.163.195.178
+  HostName 34.163.195.178
+  IdentityFile ~/.ssh/id_ed25519
+  User brunolajoie
+
+# bruno@lewagon.org / bruno-bootcamp / data-eng VM
 Host 35.240.107.210
   HostName 35.240.107.210
   User brunolajoie

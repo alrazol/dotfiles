@@ -15,8 +15,10 @@ jnbconvert() { ls *.ipynb | entr -r jupyter nbconvert "$1" --to slides --post se
 alias jn='jupyter notebook'
 alias lab='jupyter lab'
 
-# VSCODE
+# EDITORS
 alias c='code .'
+alias st='subl'
+alias stt='subl .'
 
 # LeWagon
 alias nbc="nbcleanmeta $@"

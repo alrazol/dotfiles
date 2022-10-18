@@ -29,6 +29,8 @@
     "tensorflow",
     "termcolor"
   ],
+  "ipynb.experimental.pasteImages.enabled": true,
+  "editor.experimental.pasteActions.enabled": true,
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "on",
   "editor.accessibilitySupport": "off",
@@ -202,7 +204,7 @@
   "terminal.integrated.shellIntegration.enabled": true,
   "window.newWindowDimensions": "maximized",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "GitHub Light",
+  "workbench.colorTheme": "Ayu Light Bordered",
   "workbench.editor.enablePreview": true,
   "workbench.editorAssociations": {
     "*.html": "default",
@@ -210,12 +212,14 @@
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.preferredDarkColorTheme": "Monokai",
-  "workbench.preferredLightColorTheme": "GitHub Light",
+  "workbench.preferredLightColorTheme": "Ayu Light Bordered",
   "workbench.settings.openDefaultSettings": true,
   "workbench.settings.useSplitJSON": true,
   "workbench.startupEditor": "newUntitledFile",
   "zenMode.centerLayout": false,
   "zenMode.fullScreen": true,
   "zenMode.hideLineNumbers": false,
-  "zenMode.hideTabs": false
+  "zenMode.hideTabs": false,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "cSpell.enabled": false
 }

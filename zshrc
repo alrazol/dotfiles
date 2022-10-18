@@ -20,7 +20,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 ## zsh-completion plugin has to be installed manually for performance purpose
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
-plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search z zsh-autosuggestions direnv)
+plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search z zsh-autosuggestions direnv poetry)
 
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md

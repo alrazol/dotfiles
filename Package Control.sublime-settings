@@ -29,6 +29,7 @@
 		"SublimeLinter-flake8",
 		"SublimeLinter-pylint",
 		"SublimeLinter-rubocop",
+		"Terminus",
 	],
 	"repositories":
 	[

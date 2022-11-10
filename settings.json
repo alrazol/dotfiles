@@ -158,8 +158,6 @@
   "markdown.marp.mathTypesetting": "mathjax",
   "markdown.preview.fontSize": 13,
   "markdown.preview.lineHeight": 1.4,
-  "markdown.preview.scrollEditorWithPreview": false,
-  "markdown.preview.scrollPreviewWithEditor": false,
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "right"
@@ -196,7 +194,6 @@
   "search.useIgnoreFiles": false,
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",
-  "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
@@ -221,5 +218,6 @@
   "zenMode.hideLineNumbers": false,
   "zenMode.hideTabs": false,
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "cSpell.enabled": false
+  "cSpell.enabled": false,
+  "githubPullRequests.fileListLayout": "tree"
 }

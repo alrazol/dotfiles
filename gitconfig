@@ -27,6 +27,7 @@
 
   # Clean merged branches
   sweep = !git branch --merged master | grep -v 'master$' | xargs git branch -d && git remote prune origin
+  sweepmain = !git branch --merged main | grep -v 'main$' | xargs git branch -d && git remote prune origin
 
 
   # http://www.jukie.net/bart/blog/pimping-out-git-log

@@ -33,6 +33,8 @@ alias gdt='git difftool'
 alias gdts='git difftool --staged'
 alias grss='git restore --staged'
 alias gitsweepsquash='git checkout -q master && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base master $branch) && [[ $(git cherry master $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done'
+alias my_issues="GH_PAGER=cat gh search issues --state open --assignee '@me'"
+alias my_prs="GH_PAGER=cat gh search prs --state open --assignee '@me'"
 
 # list PATH in human readable column format
-alias path="echo $PATH | tr : \\n"
+alias path='echo $PATH | tr : \\n'

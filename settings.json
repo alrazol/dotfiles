@@ -12,6 +12,8 @@
   },
   "code-runner.showExecutionMessage": false,
   "cSpell.enableFiletypes": [
+    "!python",
+    "!ruby",
     "markdown"
   ],
   "cSpell.language": "en, fr",
@@ -23,18 +25,17 @@
     "mlops",
     "nbresult",
     "ndarray",
+    "pathlib",
     "scikit",
     "sklearn",
     "taxifare",
     "tensorflow",
     "termcolor"
   ],
-  "ipynb.experimental.pasteImages.enabled": true,
-  "editor.experimental.pasteActions.enabled": true,
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "on",
   "editor.accessibilitySupport": "off",
-  "editor.bracketPairColorization.enabled": false,
+  "editor.experimental.pasteActions.enabled": true,
   "editor.fontSize": 13,
   "editor.guides.bracketPairs": false,
   "editor.inlineSuggest.enabled": true,
@@ -69,35 +70,35 @@
     "*.sql": "jinja-sql"
   },
   "files.exclude": {
-    "_site": true,
-    ".asset-cache": true,
-    ".bundle": true,
-    ".pytest_cache": true,
-    ".sass-cache": true,
-    ".svn": true,
     "**/__pycache__": true,
+    "**/_site": true,
+    "**/.asset-cache": true,
+    "**/.bundle": true,
     "**/.DS_Store": true,
     "**/.egg-info": true,
     "**/.git": true,
     "**/.ipynb_checkpoints": true,
+    "**/.pytest_cache": true,
+    "**/.sass-cache": true,
+    "**/.svn": true,
     "build": true,
     "coverage": true,
     "dist": true,
     "log": true,
     "node_modules": true,
-    "public/packs": true,
-    "tmp": true
+    "public/packs": true
   },
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
+  "files.trimTrailingWhitespace": false,
   "files.watcherExclude": {
-    "**/*.csv": true,
-    "**/.egg-info": true,
+    "**/.venv": true,
     "**/__pycache__": true,
+    "**/.egg-info": true,
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
+    "**/*.csv": true,
     "**/*{.jpg,.png,.gif,.webp,.jpeg}": true,
     "**/audits/**": true,
     "**/coverage/**": true,
@@ -106,6 +107,7 @@
     "**/tmp/**": true,
     "**/vendor/**": true
   },
+  "githubPullRequests.fileListLayout": "flat",
   "githubPullRequests.pullBranch": "never",
   "githubPullRequests.queries": [
     {
@@ -122,21 +124,6 @@
     }
   ],
   "githubPullRequests.terminalLinksHandler": "github",
-  // git lens exention
-  "gitlens.blame.avatars": false,
-  "gitlens.codeLens.enabled": false,
-  "gitlens.currentLine.enabled": false,
-  "gitlens.hovers.avatars": false,
-  "gitlens.hovers.currentLine.over": "line",
-  "gitlens.views.branches.avatars": false,
-  "gitlens.views.commits.avatars": false,
-  "gitlens.views.contributors.avatars": false,
-  "gitlens.views.fileHistory.avatars": false,
-  "gitlens.views.lineHistory.avatars": false,
-  "gitlens.views.remotes.avatars": false,
-  "gitlens.views.repositories.avatars": false,
-  "gitlens.views.searchAndCompare.avatars": false,
-  "gitlens.views.tags.avatars": false,
   "gotoNextPreviousMember.symbolKinds": [
     "class",
     "function",
@@ -146,6 +133,7 @@
     "--no-color"
   ],
   "hadolint.hadolintPath": "/usr/local/bin/hadolint",
+  "ipynb.experimental.pasteImages.enabled": true,
   "jupyter.askForKernelRestart": false,
   "jupyter.debugJustMyCode": true,
   // "jupyter.runStartupCommands": [
@@ -172,10 +160,10 @@
     //"/Users/brunolajoie/.pyenv/versions/3.8.12/envs/lewagon3812/lib/python3.8/site-packages"
   ],
   // Path to python interpreter
-  //"python.defaultInterpreterPath": "~/.pyenv/shims/python",
+  //"python.defaultInterpreterPath": "/Users/brunolajoie/.pyenv/versions/3.10.6/envs/lewagon/bin/python",
   // Python formatter & linter
   "python.formatting.provider": "yapf",
-  "python.languageServer": "Pylance",
+  "python.languageServer": "Default",
   "python.linting.enabled": false,
   "python.linting.flake8Enabled": false,
   "python.linting.pylintEnabled": false,
@@ -185,15 +173,20 @@
   //"python.terminal.activateEnvInCurrentTerminal": false,
   "python.testing.unittestEnabled": true, // Enable testing using unittest.
   "redhat.telemetry.enabled": false,
+  "ruby.codeCompletion": "rcodetools",
+  "ruby.format": false,
+  "ruby.intellisense": "rubyLocate",
   "ruby.lint": {
-    "rubocop": true
+    "rubocop": false
   },
   "search.exclude": {
-    // Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the `files.exclude` setting.
+    // Inherits all glob patterns from the `files.exclude` setting.
+    "**/.venv": true
   },
   "search.useIgnoreFiles": false,
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",
+  "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
@@ -217,7 +210,5 @@
   "zenMode.fullScreen": true,
   "zenMode.hideLineNumbers": false,
   "zenMode.hideTabs": false,
-  "terminal.integrated.defaultProfile.linux": "zsh",
-  "cSpell.enabled": false,
-  "githubPullRequests.fileListLayout": "tree"
+  "docker.volumes.sortBy": "CreatedTime"
 }

@@ -1,0 +1,14 @@
+{
+    "editor.showFoldingControls": "always",
+    "emmet.showSuggestionsAsSnippets": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "python.poetryPath": "${env:HOME}/.local/bin/poetry",
+    "python.defaultInterpreterPath": ".venv/bin/python", // because we create .venv in each challenges
+    "python.languageServer": "Default",
+    "python.formatting.provider": "black",
+    "hadolint.hadolintPath": "/home/brunolajoie/.local/bin/hadolint",
+    "remote.SSH.defaultForwardedPorts": [
+        8000
+    ]
+}

@@ -93,8 +93,8 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": false,
   "files.watcherExclude": {
-    "**/.venv": true,
-    "**/__pycache__": true,
+    "**/.venv/": true,
+    "**/__pycache__/": true,
     "**/.egg-info": true,
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
@@ -134,12 +134,13 @@
   ],
   "hadolint.hadolintPath": "/usr/local/bin/hadolint",
   "ipynb.experimental.pasteImages.enabled": true,
+  "jupyter.sendSelectionToInteractiveWindow": true,
   "jupyter.askForKernelRestart": false,
   "jupyter.debugJustMyCode": true,
-  // "jupyter.runStartupCommands": [
-  //   "%load_ext autoreload",
-  //   "%autoreload 2"
-  // ],
+  "jupyter.runStartupCommands": [
+    "%load_ext autoreload",
+    "%autoreload 2"
+  ],
   "liveServer.settings.CustomBrowser": "chrome",
   // Choose the Math expression rendering method here. You can also disable math rendering if you want by choosing 'None'.
   "markdown-preview-enhanced.mathRenderingOption": "MathJax",
@@ -210,5 +211,5 @@
   "zenMode.fullScreen": true,
   "zenMode.hideLineNumbers": false,
   "zenMode.hideTabs": false,
-  "docker.volumes.sortBy": "CreatedTime"
+  "diffEditor.ignoreTrimWhitespace": false
 }

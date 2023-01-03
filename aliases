@@ -8,7 +8,7 @@ alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 
 # Docker
 alias dc='docker-compose'
-alias dce='docker-compose exec'
+
 
 # Jupyter notebook nbconvert (refers to https://github.com/lewagon/data-lectures/wiki/How-to-set-up-a-lecture-edition-environment)
 jnbconvert() { ls *.ipynb | entr -r jupyter nbconvert "$1" --to slides --post serve --TemplateExporter.extra_template_basedirs=../templates --template=kitt; }

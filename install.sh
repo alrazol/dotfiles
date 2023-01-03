@@ -23,7 +23,7 @@ symlink() {
 
 # For all files `$name` in the present folder except `*.sh`, `README.md`, `settings.json`,
 # and `config`, backup the target file located at `~/.$name` and symlink `$name` to `~/.$name`
-for name in aliases gitconfig irbrc rspec zprofile zshrc direnvrc; do
+for name in aliases gitconfig irbrc rspec zprofile zshrc direnvrc p10k.zsh vimrc; do
   if [ ! -d "$name" ]; then
     target="$HOME/.$name"
     backup $target
@@ -49,14 +49,11 @@ if [[ `uname` =~ "Darwin" ]]; then
 # Else, it's a Linux
 else
   CODE_PATH=~/.config/Code/User
-  # If this folder doesn't exist, it's a WSL
+  # If this folder doesn't exist, it's a WSL/Virtual Machine
   if [ ! -e $CODE_PATH ]; then
     CODE_PATH=~/.vscode-server/data/Machine
   fi
 fi
-target="$CODE_PATH/settings.json"
-backup $target
-symlink $PWD/settings.json $target
 
 for name in settings.json keybindings.json; do
   target="$CODE_PATH/$name"

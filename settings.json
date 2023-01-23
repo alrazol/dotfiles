@@ -20,6 +20,7 @@
   "cSpell.userWords": [
     "CHALLENGIFY",
     "dataframe",
+    "kompose",
     "lewagon",
     "mkdir",
     "mlops",
@@ -91,8 +92,8 @@
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": false,
   "files.watcherExclude": {
+    "**/database/": true,
     "**/.venv/": true,
     "**/__pycache__/": true,
     "**/.egg-info": true,
@@ -211,5 +212,14 @@
   "zenMode.fullScreen": true,
   "zenMode.hideLineNumbers": false,
   "zenMode.hideTabs": false,
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "vs-kubernetes": {
+    "vscode-kubernetes.helm-path.mac": "/Users/brunolajoie/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+    "vs-kubernetes.minikube-show-information-expiration": "2023-01-20T11:01:43.621Z",
+    "vscode-kubernetes.kubectl-path.mac": "/Users/brunolajoie/.vs-kubernetes/tools/kubectl/kubectl",
+    "vscode-kubernetes.minikube-path.mac": "/Users/brunolajoie/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+  },
+  "terminal.integrated.tabs.defaultIcon": "more",
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "cSpell.enabled": true
 }

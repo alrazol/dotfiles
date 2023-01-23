@@ -194,11 +194,6 @@
       "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   },
   {
-      "key": "cmd+b",
-      "command": "-markdown.extension.editing.toggleBold",
-      "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
-  },
-  {
       "key": "cmd+i",
       "command": "-markdown.extension.editing.toggleItalic",
       "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"

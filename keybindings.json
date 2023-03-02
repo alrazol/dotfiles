@@ -38,12 +38,7 @@
       "command": "-notebook.cell.split",
       "when": "notebookCellEditable && notebookEditable && notebookEditorFocused"
   },
-  {
-      "key": "ctrl+shift+m",
-      "command": "notebook.cell.joinBelow",
-      "when": "notebookEditorFocused"
-  },
-  {
+{
       "key": "ctrl+alt+j",
       "command": "-notebook.cell.joinBelow",
       "when": "notebookEditorFocused"
@@ -217,13 +212,17 @@
     "command": "workbench.action.toggleMaximizedPanel",
 },
 {
-    "key": "ctrl+shift+alt+m",
-    "command": "notebook.cell.joinAbove",
-    "when": "notebookEditorFocused"
-},
-{
     "key": "ctrl+shift+alt+j",
     "command": "-notebook.cell.joinAbove",
     "when": "notebookEditorFocused"
+},
+{
+    "key": "cmd+b",
+    "command": "-markdown.extension.editing.toggleBold",
+    "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
+},
+{
+    "key": "ctrl+shift+m",
+    "command": "notebook.cell.joinSelected"
 },
 ]

@@ -1,19 +1,19 @@
-# bruno@lewagon.org / bruno-bootcamp / data-setup VM
-Host data-setup
-  HostName 34.163.195.178
-  IdentityFile ~/.ssh/id_ed25519
-  User brunolajoie
-
 # bruno@lewagon.org / bruno-bootcamp / data-eng VM
 Host data-eng
   HostName 35.240.107.210
   User brunolajoie
   IdentityFile ~/.ssh/id_ed25519
 
-Host *
-  UseKeychain yes
-  AddKeysToAgent yes
+# bruno@lewagon.org / bruno-bootcamp / data-setup VM
+Host data-setup
+  HostName 34.163.195.178
   IdentityFile ~/.ssh/id_ed25519
+  User brunolajoie
+
+Host *
+UseKeychain yes
+AddKeysToAgent yes
+IdentityFile ~/.ssh/id_ed25519
 
 # Fig ssh integration. Keep at the bottom of this file.
 Match all

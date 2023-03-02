@@ -104,8 +104,8 @@ export TF_CPP_MIN_LOG_LEVEL=2
 
 ######### RUST  ##########
 # Append rust-related bins to PATH
-. "$HOME/.cargo/env"
-#export DFT_BACKGROUND=light  # for light background shell
+# . "$HOME/.cargo/env"
+# export DFT_BACKGROUND=light  # for light background shell
 
 ######### OTHER ##########
 

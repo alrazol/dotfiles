@@ -24,6 +24,14 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src # zsh-completion plugin has to be installed manually for performance purpose
 plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search z zsh-autosuggestions direnv poetry)
 
+# Start the ssh-agent in the background
+eval "$(ssh-agent -s)"
+
+# ACTIVATE SSH AGENT IN ALL MY TERMINALS
+# [Linux] Load SSH private key into the agent
+## ssh-add ~/.ssh/id_rsa
+# [macOS]
+ssh-add --apple-use-keychain ~/.ssh/id_rsa
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -120,16 +128,18 @@ export GOOGLE_APPLICATION_CREDENTIALS="/Users/brunolajoie/.config/gcloud/applica
 
 # GOOGLE CLOUD
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; fi
-
 # AUTOCOMPLETIONS (BIS)
 
-# Fig post block. Keep at the bottom of this file.
 # [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+[[ $commands[minikube] ]] && source <(minikube completion zsh)
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Fig post block. Keep at the bottom of this file.
 [[ $commands[minikube] ]] && source <(minikube completion zsh)
 
 # Fig post block. Keep at the bottom of this file.

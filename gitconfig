@@ -13,6 +13,8 @@
   pager = less -FRSX
   editor = code --wait # editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
   ignorecase = false
+  autocrlf = input
+  verbose = true
 
 [alias]
   co = checkout
@@ -46,7 +48,12 @@
 	autocorrect = 1
 
 [push]
-	default = simple
+  # on git push, only push current branch to the remote one with same name
+  default = simple
+  # push annotated tags on the branch as well when pushing branch
+  followTags = true
+  # automatically create a remote branch if missing
+  autoSetupRemote = true
 
 [branch "master"]
   mergeoptions = --no-edit
@@ -56,7 +63,7 @@
 	name = Bruno Lajoie
 [pull]
 	ff = yes
-  rebase = false
+  rebase = true
 [init]
 	defaultBranch = master
 [filter "lfs"]
@@ -86,3 +93,7 @@
 	helper = !/usr/local/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = !/usr/local/bin/gh auth git-credential
+
+# Kpler Specific git config is to be found in a specific gitconfig file
+[includeIf "gitdir:~/code/kpler/"]
+  path = ~/.gitconfig.kpler

@@ -1,3 +1,22 @@
+UseKeychain yes  # only on MacOS
+AddKeysToAgent yes  # only on MacOS
+IdentityFile ~/.ssh/id_rsa # Created for Kpler
+
+Host dev-learn1.vpn.cor-e.fr
+  HostName dev-learn1.vpn.cor-e.fr
+  User bruno
+
+Host calc1.vpn.cor-e.fr
+  HostName calc1.vpn.cor-e.fr
+  User bruno
+
+Host *.vpn.cor-e.fr
+  User bruno
+
+Host *.galil.io
+  User kpler
+  ForwardAgent yes
+
 # bruno@lewagon.org / bruno-bootcamp / data-eng VM
 Host data-eng
   HostName 35.240.107.210
@@ -10,11 +29,7 @@ Host data-setup
   IdentityFile ~/.ssh/id_ed25519
   User brunolajoie
 
-Host *
-UseKeychain yes
-AddKeysToAgent yes
-IdentityFile ~/.ssh/id_ed25519
 
-# Fig ssh integration. Keep at the bottom of this file.
-Match all
-  Include ~/.fig/ssh
+# # Fig ssh integration. Keep at the bottom of this file.
+# Match all
+#   Include ~/.fig/ssh

@@ -68,27 +68,6 @@ if [[ `uname` =~ "Darwin" ]]; then
   ln -s $PWD/Preferences.Package Control.sublime-settings $SUBLIME_PATH/Pacakges/User/Preferences.sublime-settings
 fi
 
-# VScode
-# USE VSCODE "SETTING SYNC" FEATURE INSTEAD OF DOTFILES TO SYNC `settings.json` and `keybindings.json`
-# # Symlink VS Code settings and keybindings to the present `settings.json` and `keybindings.json` files
-# # If it's a macOS
-# if [[ `uname` =~ "Darwin" ]]; then
-#   CODE_PATH=~/Library/Application\ Support/Code/User
-# # Else, it's a Linux
-# else
-#   CODE_PATH=~/.config/Code/User
-#   # If this folder doesn't exist, it's a WSL/Virtual Machine
-#   if [ ! -e $CODE_PATH ]; then
-#     CODE_PATH=~/.vscode-server/data/Machine
-#   fi
-# fi
-
-# for name in settings.json keybindings.json; do
-#   target="$CODE_PATH/$name"
-#   backup $target
-#   symlink $PWD/$name $target
-# done
-
 # Symlink SSH config file to the present `config` file for macOS and add SSH passphrase to the keychain
 if [[ `uname` =~ "Darwin" ]]; then
   target=~/.ssh/config
@@ -96,6 +75,11 @@ if [[ `uname` =~ "Darwin" ]]; then
   symlink $PWD/config $target
   ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 fi
+
+# TODO (add manually or update this file)
+# ~/.jupyter folder
+# ~/.config/iterm2
+# ~/.gitignore
 
 # Refresh the current terminal with the newly installed configuration
 exec zsh

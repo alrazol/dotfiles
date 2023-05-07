@@ -1,7 +1,9 @@
-echo "💫load zprofile"
-
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zprofile.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zprofile.pre.zsh"
+echo "💫load zprofile"
+
+# Add brew to path
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Setup the PATH for pyenv binaries and shims
 export PYENV_ROOT="$HOME/.pyenv"

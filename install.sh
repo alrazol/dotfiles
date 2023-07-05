@@ -59,22 +59,22 @@ fi
 cd "$CURRENT_DIR"
 
 # Sublime Text - Mac OS only
-if [[ `uname` =~ "Darwin" ]]; then
-  SUBLIME_PATH=~/Library/Application\ Support/Sublime\ Text
-  mkdir -p "$SUBLIME_PATH/Packages/User" "$SUBLIME_PATH/Installed Packages"
-  backup "$SUBLIME_PATH/Pacakges/User/Preferences.sublime-settings"
-  backup "$SUBLIME_PATH/Pacakges/User/Package Control.sublime-settings"
-  ln -s $PWD/Preferences.sublime-settings $SUBLIME_PATH/Pacakges/User/Preferences.sublime-settings
-  ln -s $PWD/Preferences.Package Control.sublime-settings $SUBLIME_PATH/Pacakges/User/Preferences.sublime-settings
-fi
+# if [[ `uname` =~ "Darwin" ]]; then
+#   SUBLIME_PATH=~/Library/Application\ Support/Sublime\ Text
+#   mkdir -p "$SUBLIME_PATH/Packages/User" "$SUBLIME_PATH/Installed Packages"
+#   backup "$SUBLIME_PATH/Pacakges/User/Preferences.sublime-settings"
+#   backup "$SUBLIME_PATH/Pacakges/User/Package Control.sublime-settings"
+#   ln -s $PWD/Preferences.sublime-settings $SUBLIME_PATH/Pacakges/User/Preferences.sublime-settings
+#   ln -s $PWD/Preferences.Package Control.sublime-settings $SUBLIME_PATH/Pacakges/User/Preferences.sublime-settings
+# fi
 
-# Symlink SSH config file to the present `config` file for macOS and add SSH passphrase to the keychain
-if [[ `uname` =~ "Darwin" ]]; then
-  target=~/.ssh/config
-  backup $target
-  symlink $PWD/config $target
-  ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-fi
+# # Symlink SSH config file to the present `config` file for macOS and add SSH passphrase to the keychain
+# if [[ `uname` =~ "Darwin" ]]; then
+#   target=~/.ssh/config
+#   backup $target
+#   symlink $PWD/config $target
+#   ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+# fi
 
 # TODO (add manually or update this file)
 # ~/.jupyter folder

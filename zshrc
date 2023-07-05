@@ -15,8 +15,8 @@ ZSH=$HOME/.oh-my-zsh
 
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 #ZSH_THEME="dst"
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="robbyrussell"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -25,13 +25,7 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src # 
 plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search z zsh-autosuggestions direnv poetry)
 
 # Start the ssh-agent in the background
-eval "$(ssh-agent -s)"
-
-# ACTIVATE SSH AGENT IN ALL MY TERMINALS
-# [Linux] Load SSH private key into the agent
-## ssh-add ~/.ssh/id_rsa
-# [macOS]
-ssh-add --apple-use-keychain ~/.ssh/id_rsa
+# eval "$(ssh-agent -s)"
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -65,36 +59,6 @@ type -a rbenv > /dev/null && eval "$(rbenv init -)"
 # Same for `./node_modules/.bin` and nodejs
 export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 
-######## JAVASCRIPT #######
-
-# # Load nvm (to manage your node versions)
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# # Call `nvm use` automatically in a directory with a `.nvmrc` file
-# autoload -U add-zsh-hook
-# load-nvmrc() {
-#   if nvm -v &> /dev/null; then
-#     local node_version="$(nvm version)"
-#     local nvmrc_path="$(nvm_find_nvmrc)"
-
-#     if [ -n "$nvmrc_path" ]; then
-#       local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-#       if [ "$nvmrc_node_version" = "N/A" ]; then
-#         nvm install
-#       elif [ "$nvmrc_node_version" != "$node_version" ]; then
-#         nvm use --silent
-#       fi
-#     elif [ "$node_version" != "$(nvm version default)" ]; then
-#       nvm use default --silent
-#     fi
-#   fi
-# }
-# type -a nvm > /dev/null && add-zsh-hook chpwd load-nvmrc
-# type -a nvm > /dev/null && load-nvmrc
-
 ######### PYTHON ##########
 
 # Load pyenv (To manage your Python versions)
@@ -102,7 +66,7 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 $(pyenv version-name)]'
 
 # PYTHON PATHS (bad practice, keep this tidy)
-# export PYTHONPATH="/Users/brunolajoie/code/lewagon/data-solutions/04-Decision-Science:$PYTHONPATH"
+export PYTHONPATH="/Users/brunolajoie/code/lewagon/data-solutions/04-Decision-Science:$PYTHONPATH"
 
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
@@ -124,7 +88,6 @@ export PATH="$PATH:/Users/brunolajoie/.local/bin"
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 
 ######### CREDENTIALS - WARNING: DO NOT HARDCODE THEM HERE ##########
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/brunolajoie/.config/gcloud/application_default_credentials.json"
 
 # GOOGLE CLOUD
 

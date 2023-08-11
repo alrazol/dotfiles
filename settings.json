@@ -34,7 +34,6 @@
     "tensorflow",
     "termcolor"
   ],
-  "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "on",
   "editor.accessibilitySupport": "off",
   "editor.experimental.pasteActions.enabled": true,
@@ -69,20 +68,31 @@
   "emmet.triggerExpansionOnTab": true,
   "explorer.confirmDelete": false,
   "files.associations": {
-    "*.sql": "jinja-sql"
+    "*.sql": "jinja-sql",
+    "*.cron": "crontab",
+    "crontab": "crontab"
   },
   "files.exclude": {
+    "**/home/ftp/": true,
+    "**/.zfs/": true,
+    "**/run/": true,
+    "**/sys/": true,
+    "**/dev/": true,
+    "**/tmp/": true,
+    "**/usr/": true,
+    "**/var/": true,
+    "**/proc/": true,
     "**/__pycache__": true,
     "**/_site": true,
-    "**/.asset-cache": true,
-    "**/.bundle": true,
-    "**/.DS_Store": true,
-    "**/.egg-info": true,
-    "**/.git": true,
-    "**/.ipynb_checkpoints": true,
-    "**/.pytest_cache": true,
-    "**/.sass-cache": true,
-    "**/.svn": true,
+    "**/*.asset-cache": true,
+    "**/*.bundle": true,
+    "**/*.DS_Store": true,
+    "**/*.egg-info": true,
+    "**/*.ipynb_checkpoints": true,
+    "**/*.pytest_cache": true,
+    "**/*.sass-cache": true,
+    "**/*.svn": true,
+    "**/*.pyc": true,
     "build": true,
     "coverage": true,
     "dist": true,
@@ -92,9 +102,12 @@
   },
   "files.hotExit": "off",
   "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": false,
+  "files.trimTrailingWhitespace": false,
   "files.watcherExclude": {
+    "/": true,
+    "**": true,
+    "**/*.*": true,
     "**/database/": true,
     "**/.venv/": true,
     "**/__pycache__/": true,
@@ -108,7 +121,7 @@
     "**/log/**": true,
     "**/node_modules/**": true,
     "**/tmp/**": true,
-    "**/vendor/**": true
+    "**/vendor/**": true,
   },
   "githubPullRequests.fileListLayout": "tree",
   "githubPullRequests.pullBranch": "never",
@@ -137,7 +150,6 @@
   ],
   "hadolint.hadolintPath": "/usr/local/bin/hadolint",
   "ipynb.experimental.pasteImages.enabled": true,
-  "jupyter.sendSelectionToInteractiveWindow": true,
   "jupyter.askForKernelRestart": false,
   "jupyter.debugJustMyCode": true,
   "jupyter.runStartupCommands": [
@@ -157,12 +169,6 @@
   "notebook.diff.ignoreMetadata": true,
   "notebook.lineNumbers": "on",
   "notebook.markup.fontSize": 13,
-  // "python.venvFolders": [
-  //   "/Users/brunolajoie/.pyenv/versions/3.8.12/envs/"
-  // ],
-  "python.analysis.extraPaths": [
-    //"/Users/brunolajoie/.pyenv/versions/3.8.12/envs/lewagon3812/lib/python3.8/site-packages"
-  ],
   // Path to python interpreter
   //"python.defaultInterpreterPath": "/Users/brunolajoie/.pyenv/versions/3.10.6/envs/lewagon/bin/python",
   // Python formatter & linter
@@ -185,7 +191,13 @@
   },
   "search.exclude": {
     // Inherits all glob patterns from the `files.exclude` setting.
-    "**/.venv": true
+    "**/.venv": true,
+    "**/*.log": true,
+    "**/*.csv": true, // KPLER SPECIFIC
+    "**/*.grib": true,
+    "**/*.grib2": true,
+    "**/*.pyc": true,
+    "**/.git": true,
   },
   "search.useIgnoreFiles": false,
   "security.workspace.trust.untrustedFiles": "open",
@@ -198,13 +210,12 @@
   "terminal.integrated.shellIntegration.enabled": true,
   "window.newWindowDimensions": "maximized",
   "window.restoreWindows": "none",
-  "workbench.colorTheme": "Ayu Light Bordered",
   "workbench.editor.enablePreview": true,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editorAssociations": {
     "*.html": "default",
     "*.ipynb": "jupyter-notebook"
   },
-  "workbench.iconTheme": "material-icon-theme",
   "workbench.preferredDarkColorTheme": "Monokai",
   "workbench.preferredLightColorTheme": "Ayu Light Bordered",
   "workbench.settings.openDefaultSettings": true,
@@ -223,8 +234,43 @@
   },
   "terminal.integrated.tabs.defaultIcon": "more",
   "markdown-preview-enhanced.previewTheme": "github-light.css",
-  "cSpell.enabled": true,
+  "cSpell.enabled": false,
   "githubPullRequests.createOnPublishBranch": "never",
   "git.openRepositoryInParentFolders": "never",
-  "editor.unicodeHighlight.ambiguousCharacters": false
+"editor.unicodeHighlight.ambiguousCharacters": false,
+"jupyter.interactiveWindow.textEditor.executeSelection": true,
+"excalidraw.theme": "auto",
+"github.copilot.enable": {
+  "*": true,
+  "plaintext": true,
+  "markdown": false,
+  "scminput": false
+},
+"workbench.colorTheme": "Ayu Light Bordered",
+"sshfs.configs": [
+  {
+    "name": "cor-e",
+    "label": "calc1",
+    "host": "calc1.vpn.cor-e.fr",
+    "root": "/",
+    "username": "bruno",
+    "hop": "cor-e"
+  },
+  {
+    "name": "cor-e",
+    "label": "dev-calc1",
+    "host": "dev-calc1.vpn.cor-e.fr",
+    "username": "bruno",
+    "privateKeyPath": "/Users/brunolajoie/.ssh/id_rsa"
+  }
+],
+"workbench.iconTheme": "material-icon-theme",
+"extensions.ignoreRecommendations": true,
+"terminal.integrated.persistentSessionScrollback": 5000,
+"terminal.integrated.scrollback": 5000,
+"window.zoomLevel": 1,
+// "python.analysis.extraPaths": [
+//   "/home/core/functions", // KPLER SPECIFIC
+//   "/opt/prog/models", // KPLER SPECIFIC
+//   ],
 }

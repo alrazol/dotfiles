@@ -1,4 +1,7 @@
-echo "⚡️load zshrc"
+echo "load bruno zshrc"
+# # PYTHON PATHS (bad practice, keep this tidy)
+export PYTHONPATH=/home/bruno/power-workflow/:$PYTHONPATH
+export PATH=~/.local/bin:$PATH
 
 ############################ <BASHRC> COPY FROM .BASHRC ##################
 # ~/.bashrc: executed by bash(1) for non-login shells.
@@ -132,7 +135,7 @@ fi
 #   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 # fi
 
-# # Fig pre block. Keep at the top of this file.
+
 # # ZSH
 ZSH=$HOME/.oh-my-zsh
 
@@ -158,8 +161,6 @@ ZSH_DISABLE_COMPFIX=true
 
 # Actually load Oh-My-Zsh
 source "${ZSH}/oh-my-zsh.sh"
-unalias rm # No interactive rm by default (brought by plugins/common-aliases)
-unalias lt # we need `lt` for https://github.com/localtunnel/localtunnel
 
 # Store your own aliases in the ~/.aliases file and load the here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
@@ -169,19 +170,6 @@ export LANG=en_US.UTF-8 # Unicode (richer than ASCII)
 export LC_ALL=en_US.UTF-8 # Unicode (richer than ASCII)
 
 export EDITOR='code --wait'
-# export EDITOR=code
-# export BUNDLER_EDITOR=code
-# export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-######### RUBY ############
-
-# Load rbenv if installed (to manage your Ruby versions)
-export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
-type -a rbenv > /dev/null && eval "$(rbenv init -)"
-
-# Rails and Ruby uses the local `bin` folder to store binstubs.
-# So instead of running `bin/rails` like the doc says, just run `rails`
-# Same for `./node_modules/.bin` and nodejs
-export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 
 ######### PYTHON ##########
 
@@ -189,21 +177,11 @@ export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 $(pyenv version-name)]'
 
-# PYTHON PATHS (bad practice, keep this tidy)
-export PYTHONPATH=/home/bruno/power-workflow/:$PYTHONPATH
-
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
 
 # Tensorflow: 0 = all messages are logged (default behavior), 1 = INFO messages are not printed, 2 = INFO and WARNING messages are not printed, 3 = INFO, WARNING, and ERROR messages are not printed
 export TF_CPP_MIN_LOG_LEVEL=2
-
-
-######### OTHER ##########
-
-# Created by `userpath` on 2020-09-24 15:10:53
-export PATH="$PATH:/Users/brunolajoie/.local/bin"
-
 
 ######### CREDENTIALS - WARNING: DO NOT HARDCODE THEM HERE ##########
 
@@ -223,8 +201,5 @@ if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/op
 # Fig post block. Keep at the bottom of this file.
 [[ $commands[minikube] ]] && source <(minikube completion zsh)
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
-# For poetry & other locally installed on bruno@dev-cacl1
-export PATH=~/.local/bin:$PATH
+# # Fig post block. Keep at the bottom of this file.
+# [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

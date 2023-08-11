@@ -1,10 +1,10 @@
 ######## OH MY ZSH ############
-# [alias list](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git#aliases)
+# [alias list](https://github.com/ohmyzsh/ohmyzsh/tree/main/plugins/git#aliases)
 
 ######## HOME MADE ############
 # Get External IP / Internet Speed
 alias myip="curl https://ipinfo.io/json" # or /ip for plain-text ip
-alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
+alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/main/speedtest.py | python -"
 
 # Devops
 alias dc='docker-compose'
@@ -33,7 +33,7 @@ alias gbranches='for branch in `git branch | grep -v HEAD`;do echo -e `git show 
 alias gdt='git difftool'
 alias gdts='git difftool --staged'
 alias grss='git restore --staged'
-alias gitsweepsquash='git checkout -q master && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base master $branch) && [[ $(git cherry master $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done'
+# alias gitsweepsquash='git checkout -q main && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base main $branch) && [[ $(git cherry main $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done'
 alias my_issues="GH_PAGER=cat gh search issues --state open --assignee '@me'"
 alias my_prs="GH_PAGER=cat gh search prs --state open --assignee '@me'"
 

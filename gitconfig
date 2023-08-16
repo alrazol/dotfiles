@@ -59,8 +59,8 @@
   mergeoptions = --no-edit
 
 [user]
-	email = brunolajoie@gmail.com
-	name = Bruno Lajoie
+	email = arazol@kpler.com
+	name = Alfred Razol
 [pull]
 	ff = yes
   rebase = true

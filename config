@@ -1,4 +1,11 @@
-Host *
-  UseKeychain yes
-  AddKeysToAgent yes
-  IdentityFile ~/.ssh/id_ed25519
+Host dev-calc1.vpn.cor-e.fr
+    HostName dev-calc1.vpn.cor-e.fr
+    ForwardAgent yes
+    User alfred
+
+Host *.vpn.cor-e.fr
+    UseKeychain yes
+    AddKeysToAgent yes
+    User alfred
+    TCPKeepAlive yes
+    HashKnownHosts no

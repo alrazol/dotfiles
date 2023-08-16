@@ -60,7 +60,7 @@
 
 [user]
 	email = arazol@kpler.com
-	name = Alfred Razol
+	name = alfred razol
 [pull]
 	ff = yes
   rebase = true

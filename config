@@ -1,11 +1,44 @@
-Host dev-calc1.vpn.cor-e.fr
-    HostName dev-calc1.vpn.cor-e.fr
+Host core-calc1
+    HostName calc1.vpn.cor-e.fr
+    User core
     ForwardAgent yes
-    User alfred
+    UseKeychain yes 
+    AddKeysToAgent yes
+    TCPKeepAlive yes  
+    HashKnownHosts no
 
-Host *.vpn.cor-e.fr
+Host alfred-calc1
+    HostName calc1.vpn.cor-e.fr
+    User alfred
+    ForwardAgent yes
+    UseKeychain yes 
+    AddKeysToAgent yes
+    TCPKeepAlive yes  
+    HashKnownHosts no
+
+Host alfred-dev-calc1
+    HostName dev-calc1.vpn.cor-e.fr
+    User alfred
+    ForwardAgent yes
+    UseKeychain yes 
+    AddKeysToAgent yes
+    TCPKeepAlive yes  
+    HashKnownHosts no
+
+Host core-dev-calc1
+    HostName calc1.vpn.cor-e.fr
+    User core
+    ForwardAgent yes
+    UseKeychain yes 
+    AddKeysToAgent yes
+    TCPKeepAlive yes  
+    HashKnownHosts no
+
+Host core-learn1
+    HostName learn1.vpn.cor-e.fr
+    User core
+    ForwardAgent yes
     UseKeychain yes
     AddKeysToAgent yes
-    User alfred
     TCPKeepAlive yes
     HashKnownHosts no

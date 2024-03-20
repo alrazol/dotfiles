@@ -2,7 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="crcandy"
 
 # Useful oh-my-zsh plugins
 plugins=(git gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search)

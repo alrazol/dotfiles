@@ -1,7 +1,8 @@
-echo "load bruno zshrc"
+echo "load alfred zshrc"
 # # PYTHON PATHS (bad practice, keep this tidy)
-export PYTHONPATH=/home/bruno/power-workflow/:$PYTHONPATH
+#export PYTHONPATH=/home/alfred/power-workflow/:$PYTHONPATH
 export PATH=~/.local/bin:$PATH
+export PATH=$PATH:/opt/prog/runner
 
 ############################ <BASHRC> COPY FROM .BASHRC ##################
 # ~/.bashrc: executed by bash(1) for non-login shells.
@@ -140,8 +141,8 @@ fi
 ZSH=$HOME/.oh-my-zsh
 
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
-ZSH_THEME="dst"
-#umaskZSH_THEME="robbyrussell"
+#ZSH_THEME="dst"
+ZSH_THEME="candy"
 #ZSH_THEME="powerlevel10k/powerlevel10k"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

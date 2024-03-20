@@ -2,34 +2,48 @@ UseKeychain yes  # only on MacOS
 AddKeysToAgent yes  # only on MacOS
 IdentityFile ~/.ssh/id_rsa # Created for Kpler
 
-Host dev-learn1.vpn.cor-e.fr
-  HostName dev-learn1.vpn.cor-e.fr
-  User bruno
+Host core-calc1
+    HostName calc1.vpn.cor-e.fr
+    User core
+    ForwardAgent yes
+    UseKeychain yes
+    AddKeysToAgent yes
+    TCPKeepAlive yes
+    HashKnownHosts no
 
-Host calc1.vpn.cor-e.fr
-  HostName calc1.vpn.cor-e.fr
-  User bruno
+Host alfred-calc1
+    HostName calc1.vpn.cor-e.fr
+    User alfred
+    ForwardAgent yes
+    UseKeychain yes
+    AddKeysToAgent yes
+    TCPKeepAlive yes
+    HashKnownHosts no
 
-Host *.vpn.cor-e.fr
-  User bruno
+Host alfred-dev-calc1
+    HostName dev-calc1.vpn.cor-e.fr
+    User alfred
+    ForwardAgent yes
+    UseKeychain yes
+    AddKeysToAgent yes
+    TCPKeepAlive yes
+    HashKnownHosts no
 
-Host *.galil.io
-  User kpler
-  ForwardAgent yes
+Host core-dev-calc1
+    HostName dev-calc1.vpn.cor-e.fr
+    User core
+    ForwardAgent yes
+    UseKeychain yes
+    AddKeysToAgent yes
+    TCPKeepAlive yes
+    HashKnownHosts no
 
-# bruno@lewagon.org / bruno-bootcamp / data-eng VM
-Host data-eng
-  HostName 35.240.107.210
-  User brunolajoie
-  IdentityFile ~/.ssh/id_ed25519
+Host core-learn1
+    HostName learn1.vpn.cor-e.fr
+    User core
+    ForwardAgent yes
+    UseKeychain yes
+    AddKeysToAgent yes
+    TCPKeepAlive yes
+    HashKnownHosts no
 
-# bruno@lewagon.org / bruno-bootcamp / data-setup VM
-Host data-setup
-  HostName 34.163.195.178
-  IdentityFile ~/.ssh/id_ed25519
-  User brunolajoie
-
-
-# # Fig ssh integration. Keep at the bottom of this file.
-# Match all
-#   Include ~/.fig/ssh

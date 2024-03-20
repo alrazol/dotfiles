@@ -1,6 +1,6 @@
 # Fig pre block. Keep at the top of this file.
 # [[ -f "$HOME/.fig/shell/zprofile.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zprofile.pre.zsh"
-echo "load bruno zprofile"
+echo "load Alfred zprofile"
 
 # Add brew to path
 # eval "$(/opt/homebrew/bin/brew shellenv)"
